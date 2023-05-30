@@ -1,10 +1,10 @@
-# Databricks Formula 1 Racing Analysis
+# Formula 1 Dataset Analysis Using Databricks
 
 ## Problem Statement
-To design and orchestrate a Data Pipeline using Databricks and Azure to perform analysis and visualization on Formula 1 race results.
+To perform analysis and visualization on Formula 1 race results.
 
 ### Formula 1 Overview
-An Overview of Formula 1 racing can be learned from https://f1chronicle.com/a-beginners-guide-to-formula-1/
+Details about Formula 1 racing can be learned from the following:   https://f1chronicle.com/a-beginners-guide-to-formula-1/
 
 ![F1 Overview](./images/overview.png)
 
@@ -17,7 +17,8 @@ Attributes of each tables is described in http://ergast.com/docs/f1db_user_guide
 
 ## Data Pipeline
 ![Data Pipeline](./images/data_pipeline.png)
-The data from Ergest Developer API is imported into raw ADLS container on Azure. We will then take this data and process using databricks notebook to ingest into ingested raw layer. The data in this layer will have schema applied as as well stored in the columnar parquet format. We will create partitions wherever applicable as well as add additional information for audit purposes, such as a date, a source of the data, etc. Ingested data will then be tranformed via databricks notebook for presentation layer where dashboards are created to statisfy our requirements for analysis. Azure Data Factory is later used for scheduling and monitoring requirements. This pipeline is later converted into Delta Lakehouse architecture to satisfy other requirements around GDPR, time travel, etc.
+The Ergest Developer API data is imported into an Azure Data Lake Storage (ADLS) container as raw data. We then utilize Databricks notebook to process and ingest this data into the ingested raw layer. The ingested data is structured with a schema and stored in columnar parquet format, with partitions created where applicable. Additionally, we include audit-related information such as date and data source. The transformed data is then processed through Databricks notebook for the presentation layer, where we create dashboards to fulfill our analysis requirements. Azure Data Factory is employed for scheduling and monitoring tasks. To meet GDPR and time travel requirements, the pipeline is later converted into the Delta Lakehouse architecture.
+
 
 ## Project Requirements
 ### Data Ingestion Requirements:
@@ -76,10 +77,11 @@ The data from Ergest Developer API is imported into raw ADLS container on Azure.
 ![Dominant Teams](./images/dominant_teams.png)
 
 ## Technologies Used:
-- Datadricks
+- Databricks
 - Azure
-- ADF
+- Azure Data Factory
 - PySpark
 - Python
+- SQL
 
 
