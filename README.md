@@ -13,8 +13,7 @@ The data for all the formula 1 races from 1950s onwards is ontained from an open
 
 # Data Model
 
-<img src="https://ergast.com/images/ergast_db.png" alt="Data Model">
-
+![Data Model] (./images/ergast_db)
 
 
 
