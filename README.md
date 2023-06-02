@@ -11,7 +11,11 @@ Details about Formula 1 racing can be learned from the following:   https://f1ch
 ## Data Source
 The data for all the formula 1 races from 1950s onwards is ontained from an open source API called Ergest Developer API (http://ergast.com/mrd/). The API provides the following tables: <br>
 
+# Data Model
+
 ![Data Model](https://ergast.com/images/ergast_db.png)
+
+
 
 Attributes of each tables is described in http://ergast.com/docs/f1db_user_guide.txt. Each tables is present as a single line/multiline CSV or JSON file in the data folder. 
 
